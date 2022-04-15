@@ -17,7 +17,12 @@ class ExchangeResource extends JsonResource
      */
     public function toArray($request)
     {
+        // dd($this[1]);
         // TODO: response data {"exchange_rate": 0.25, "udpated_at": "2022-01-01 23:59:59"}
-        return [];
+        return 
+        [
+            'exchange_rate'=>$this[0],
+            'udpated_at'=>$this[1],
+        ];
     }
 }
